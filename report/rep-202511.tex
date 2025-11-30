@@ -1,0 +1,68 @@
+% \documentclass[UTF8,a4paper]{ctexart}
+
+\documentclass{report}
+\usepackage[UTF8]{ctex}
+\usepackage{titlesec} % 标题格式
+\usepackage[top=4cm, bottom=2.5cm, left=3.5cm, right=2.5cm]{geometry} % 间隙
+
+
+\renewcommand{\baselinestretch}{1.5} % 行距
+
+\titleclass{\chapter}{straight} % 取消自动分页
+\titleformat{\chapter}{\Large\bfseries}{\thechapter.}{1em}{}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\chapter}{0pt}{80pt}{10pt} % 间距
+\titlespacing*{\section}{0pt}{40pt}{15pt} % 间距
+
+
+% P0
+\title{\Huge \bfseries \vspace*{1cm} 月度学习报告}
+\author{
+    \Large
+    \begin{tabular}{r @{\quad} l} 
+        \textbf{姓\qquad 名：} & 刘世豪 \\
+        \textbf{学\qquad 号：} & 22560439 \\
+        \textbf{专\qquad 业：} & 大数据技术与工程 \\
+    \end{tabular}
+}
+\date{2025年11月} 
+
+
+
+\begin{document}
+\maketitle
+
+% 1
+\chapter{概述}
+本月，我完成了对数值代数的学习。数值代数主要为了解决以下几大类问题：求解线性方程组Ax=b;
+在方程组无解时求近似解；求解矩阵的特征值或奇异值。
+
+
+% 2
+\chapter{学习情况}
+% \section{具体学习情况}
+在求解线性方程组问题中，可以用多种矩阵分解方法简化运算，如
+LU分解($A=LU$或$PA=LU$)、
+Cholesky分解(在LU分解的基础上将对称矩阵分解$A=KK^T$)、
+QR分解(将m$\times$n大小的矩阵分解为正交矩阵和上三角矩阵的积:$A=Q_{m \times m}R_{m \times n}$)、
+奇异值分解($A=U_{m \times n}\Sigma_{n \times n}V_{n \times n}$)
+等方法。
+如果方程组维度较高，则可以用迭代法求近似解从而简化计算，如Jacobi迭代法、Gauss-Seidel迭代法和松弛迭代法。\\
+
+当方程组无解时，可以通过最小二乘法求最优近似解，并用QR分解、SVD分解等方法帮助求解最小二乘法。\\
+
+矩阵的特征向量可以理解为在线性变换中方向保持不变的向量，特征值可以理解为这个方向上的拉伸倍数。
+求矩阵的特征值或奇异值时，可以用QR算法、SVD分解、施密特正交化等方法。
+
+
+% 3
+\chapter{未来学习计划}
+我计划于下个月完成数值分析的学习。之后，我将从以下几个方向中选择部分作为近期的学习目标：\\
+1、进一步学习机器学习的内容，并在kaggle平台上尝试完成一些基础项目。\\
+2、继续学习数学课程，并对已学内容进行复习和深入。\\
+3、学习C++编程和linxv开发。
+
+
+
+\end{document}
